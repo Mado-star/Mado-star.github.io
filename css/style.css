@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #353535;
+    /*background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,107,141,1) 0%, rgba(0,69,91,1) 90% );*/
+    background-image: linear-gradient( 181deg,  rgba(2,0,97,1) 15%, rgba(97,149,219,1) 158.5% );
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    height: 100px;
+}
+
+/* Use a column container for mobile */
+.flex-container {  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-container > div { /* plotting canvas should be placed inside div with position relative for responive scaling */
+    position: relative; 
+    width: 100%;
+    height: 400px;
+}
+
+/* Responsive layout */
+@media screen and (min-width: 720px) { /* Switch to 2 columns at above 720px width */
+    .flex-container {   
+        flex-direction: row;
+    }
+    .flex-container > div {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) { /* Switch to 3 columns at above 1024px width */
+    .flex-container > div {
+        width: calc(100%/3);
+    }
+}

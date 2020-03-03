@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SpaceX Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/Chart.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body onload="plot()">
+    <header><h1>SpaceX Dashboard</h1></header>
+
+    <!-- The flexible grid (content) -->
+    <div class="flex-container">
+        <div>
+            <canvas id="accelerationChart"></canvas>
+        </div>
+        <div>
+            <canvas id="speedChart"></canvas>
+        </div>
+        <div>
+            <canvas id="distanceChart"></canvas>
+        </div>
+        <div>
+            <canvas id="gravityChart"></canvas>
+        </div>
+        <div>
+            <canvas id="foodChart"></canvas>
+        </div>
+        <div>
+            <canvas id="fuelChart"></canvas>
+        </div>
+    </div>
+
+</body>
+</html>
